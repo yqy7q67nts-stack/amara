@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amara by Casa Melhor | An Apartel in Verla Canca, North Goa">
+<meta property="og:description" content="Spacious 2 Bed residences with hotel-style service, common pool, just off Assagaon. Starting Rs 5,000 per apartment.">
+<meta property="og:image" content="https://yqy7q67nts-stack.github.io/amara/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://yqy7q67nts-stack.github.io/amara/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 100'%3E%3Cpath d='M6 96V40a34 34 0 0 1 68 0v56Z' fill='%23214d31'/%3E%3Cpath d='M40 30v54M40 50C36 42 30 38 22 37M40 50c4-8 10-12 18-13M40 54C33 47 24 45 15 46.5M40 54c7-7 16-9 25-7.5' stroke='%23f5f0e7' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>Amara by Casa Melhor</title>
+<meta name="description" content="Amara, an apartel in Verla Canca, just off Assagaon, North Goa. 2 Bed residences with hotel-style service. Starting Rs 5,000 per apartment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@300;400;700&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: brand-led single column; arched photo hero, stay details, interactive location map, booking band in Casa Melhor forest green */
+:root{
+  --paper:#f5f0e7; --paper-2:#ece5d7; --ink:#1c3526; --muted:#56685b; --line:#cfd6c7;
+  --forest:#214d31; --leaf:#23802b; --sky:#cfe3ec; --on-forest:#f5f0e7; --on-forest-muted:#b9cbbb;
+  --sea:#d4e6ee; --land:#efe8da; --river:#bcd8e4; --pin-ring:#ffffff;
+  --display:"Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --body:"Lato", "Helvetica Neue", Arial, sans-serif;
+  --script:"Pinyon Script", "Snell Roundhand", cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#121f17; --paper-2:#18291e; --ink:#ebe5d8; --muted:#a7b5a8; --line:#2c4233;
+  --forest:#0c1811; --leaf:#7cc47f; --sky:#2a4652; --on-forest:#ebe5d8; --on-forest-muted:#9fb3a3;
+  --sea:#17303a; --land:#1d3125; --river:#22424f; --pin-ring:#121f17; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#121f17; --paper-2:#18291e; --ink:#ebe5d8; --muted:#a7b5a8; --line:#2c4233;
+  --forest:#0c1811; --leaf:#7cc47f; --sky:#2a4652; --on-forest:#ebe5d8; --on-forest-muted:#9fb3a3;
+  --sea:#17303a; --land:#1d3125; --river:#22424f; --pin-ring:#121f17; color-scheme:dark }
+
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);font-weight:700}
+a:focus-visible,button:focus-visible{outline:2px solid var(--leaf);outline-offset:3px;border-radius:4px}
+
+/* Header */
+.top{padding-block:28px 8px}
+.top .wrap{display:flex;justify-content:center}
+.logo{display:flex;align-items:center;gap:14px;color:var(--leaf);text-decoration:none}
+.logo svg{width:44px;height:56px;flex:none}
+.logo .w{display:flex;flex-direction:column;line-height:1}
+.logo .casa{font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:.02em}
+.logo .melhor{font-weight:300;font-size:14px;letter-spacing:.62em;margin-top:6px;padding-left:2px}
+
+/* Hero */
+.hero{padding-block:20px 56px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.place{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.place span+span::before{content:"";display:inline-block;width:1px;height:12px;background:var(--line);margin-right:14px;vertical-align:-1px}
+.hero h1{font-family:var(--display);font-weight:600;font-size:clamp(56px,9vw,104px);line-height:.95;letter-spacing:.01em;margin-top:22px}
+.tag{display:inline-block;font-family:var(--script);font-size:clamp(30px,4.2vw,42px);line-height:1.2;margin-top:10px;padding:0 10px;background:linear-gradient(transparent 58%,var(--sky) 58%,var(--sky) 92%,transparent 92%)}
+.lede{margin-top:22px;font-size:18px;max-width:34em;color:var(--ink)}
+.lede strong{font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.06em;text-decoration:none;border:1.5px solid var(--forest);transition:background .2s,color .2s}
+.btn.solid{background:var(--forest);color:var(--on-forest)}
+.btn.ghost{color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--leaf)}
+.btn.solid:hover{background:var(--leaf);border-color:var(--leaf)}
+:root[data-theme="dark"] .btn.solid{border-color:var(--leaf)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.solid{border-color:var(--leaf)}}
+.btn svg{width:16px;height:16px}
+.arch{position:relative;max-width:460px;width:100%;justify-self:center}
+.arch .frame{border:1px solid var(--forest);border-radius:999px 999px 6px 6px;padding:10px;background:var(--paper)}
+.arch img{display:block;width:100%;aspect-ratio:1100/1225;object-fit:cover;border-radius:999px 999px 2px 2px}
+.price{position:absolute;left:-22px;bottom:34px;background:var(--paper);border:1px solid var(--line);padding:12px 18px;border-radius:6px;box-shadow:0 10px 30px -14px rgba(20,40,28,.35)}
+.price small{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.price b{font-family:var(--display);font-size:32px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.price span{font-size:13px;color:var(--muted)}
+
+/* Stay */
+.stay{padding-block:64px;border-top:1px solid var(--line)}
+.stay .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.sec-h{font-family:var(--display);font-weight:600;font-size:clamp(36px,5vw,52px);line-height:1.05;margin-top:12px}
+.stay .intro p{margin-top:18px;color:var(--muted);max-width:30em}
+.kinds{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--line)}
+.kinds li{padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-size:24px;font-weight:500}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:0;align-content:start}
+.feat{padding:22px 22px 24px 0;border-top:2px solid var(--forest);margin-right:22px;min-width:0}
+.feat h3{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--leaf)}
+.feat p{margin-top:8px;color:var(--ink)}
+.pool{margin-top:48px;grid-column:1/-1}
+.pool img{display:block;width:100%;aspect-ratio:1600/711;object-fit:cover;border-radius:8px}
+.pool figcaption{margin-top:10px;font-size:13px;color:var(--muted)}
+
+/* Location */
+.loc{padding-block:64px;background:var(--paper-2)}
+.loc .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px}
+.loc .head p{color:var(--muted);max-width:30em;margin-top:14px}
+.loc .head p.addr{color:var(--ink);font-weight:700;user-select:all}
+.addr .k{display:block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;user-select:none}
+.loc .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:40px;margin-top:36px;align-items:start}
+.dests{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.group-label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--muted);margin:8px 0 2px}
+.dest{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--paper);cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%;transition:border-color .2s,box-shadow .2s}
+.dest:hover{border-color:var(--leaf)}
+.dest[aria-pressed="true"]{border-color:var(--forest);box-shadow:inset 3px 0 0 var(--leaf)}
+.dest .n{font-weight:700;min-width:0}
+.dest .t{font-family:var(--display);font-size:24px;font-weight:600;line-height:1;white-space:nowrap;font-variant-numeric:tabular-nums}
+.dest .d{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.dir{display:none;grid-column:1/-1;margin-top:6px;font-size:13px;font-weight:700;color:var(--leaf);text-decoration:none;letter-spacing:.04em}
+.dest[aria-pressed="true"] .dir{display:inline-flex;gap:6px;align-items:center}
+.mapbox{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}
+.mapbox svg{display:block;width:100%;height:auto;max-height:78vh}
+.mapnote{font-size:12px;color:var(--muted);margin-top:8px;padding:0 4px}
+.maplink{margin-top:28px}
+
+/* Booking */
+.book{background:var(--forest);color:var(--on-forest);padding-block:64px}
+.book .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.book .eyebrow{color:var(--on-forest-muted)}
+.book h2{font-family:var(--display);font-weight:600;font-size:clamp(38px,5vw,56px);line-height:1.05;margin-top:12px}
+.book .from{margin-top:16px;color:var(--on-forest-muted)}
+.book .from b{color:var(--on-forest);font-family:var(--display);font-size:30px;font-weight:600}
+.contacts{display:flex;flex-direction:column;gap:12px}
+.contact{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border:1px solid rgba(245,240,231,.25);border-radius:8px;min-width:0}
+.contact .k{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--on-forest-muted);font-weight:700}
+.contact .v{font-size:18px;user-select:all;word-break:break-all;color:var(--on-forest);text-decoration:none;font-variant-numeric:tabular-nums}
+.contact .acts{display:flex;gap:8px;flex:none}
+.mini{font:inherit;font-size:12px;font-weight:700;letter-spacing:.06em;padding:8px 12px;border-radius:999px;border:1px solid rgba(245,240,231,.45);background:transparent;color:var(--on-forest);cursor:pointer;text-decoration:none;white-space:nowrap}
+.mini:hover{background:rgba(245,240,231,.12)}
+footer{padding-block:28px;font-size:13px;color:var(--muted);text-align:center}
+
+@media (max-width:860px){
+  .hero .wrap,.stay .wrap,.book .wrap,.loc .grid{grid-template-columns:1fr;gap:36px}
+  .hero{padding-block:8px 44px}
+  .arch{max-width:400px}
+  .price{left:0}
+  .mapbox{position:static}
+  .mapbox svg{max-height:none}
+  .loc .grid{display:flex;flex-direction:column-reverse}
+}
+@media (max-width:480px){
+  .feats{grid-template-columns:1fr}
+  .feat{margin-right:0}
+  .logo .casa{font-size:38px}
+  .contact{flex-direction:column;align-items:flex-start}
+  .price{bottom:18px;padding:10px 14px}
+  .price b{font-size:26px}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#book" aria-label="Casa Melhor">
+    <svg viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true">
+      <path d="M6 96V40a34 34 0 0 1 68 0v56Z" stroke-width="3"/>
+      <path d="M40 30v54" stroke-width="3"/>
+      <path d="M40 50C36 42 30 38 22 37M40 50c4-8 10-12 18-13" stroke-width="3"/>
+      <path d="M40 54C33 47 24 45 15 46.5M40 54c7-7 16-9 25-7.5" stroke-width="3"/>
+      <path d="M40 57c-7-5-14-3-17 8M40 57c7-5 14-3 17 8" stroke-width="3"/>
+    </svg>
+    <span class="w"><span class="casa">CASA</span><span class="melhor">MELHOR</span></span>
+  </a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="place eyebrow"><span>Amara</span><span>Just off Assagaon</span><span>North Goa</span></div>
+    <h1>Amara</h1>
+    <div class="tag">An Apartel in Verla Canca</div>
+    <p class="lede"><strong>The space of an apartment, served like a hotel.</strong> Spacious 2 Bed residences with hotel-style service: housekeeping on schedule, and a team on call through your stay.</p>
+    <div class="cta">
+      <a class="btn solid" href="#book">Book your stay</a>
+      <a class="btn ghost" href="#location">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        See the location</a>
+    </div>
+  </div>
+  <figure class="arch" style="margin:0">
+    <div class="frame"><img src="bed.jpg" alt="Bedroom at Amara: a king bed with white linen, two glasses on a tray, garden light from a tall window"></div>
+    <div class="price"><small>Starting</small><b>&#8377;5,000</b> <span>per apartment</span></div>
+  </figure>
+</div></section>
+
+<section class="stay"><div class="wrap">
+  <div class="intro">
+    <div class="eyebrow">The stay</div>
+    <h2 class="sec-h">For every kind of stay</h2>
+    <p>Room to spread out like a home, with the upkeep handled like a hotel. Cook in or order out, swim, work, or slow right down.</p>
+    <ul class="kinds">
+      <li>The weekend break</li>
+      <li>Work-from-Goa</li>
+      <li>Longer, slower stays</li>
+    </ul>
+  </div>
+  <div class="feats">
+    <div class="feat"><h3>2 Bed residences</h3><p>Spacious apartments with the room of a proper home.</p></div>
+    <div class="feat"><h3>Common pool</h3><p>A shared swimming pool for all our guests, set in a private garden.</p></div>
+    <div class="feat"><h3>Hotel-style service</h3><p>Housekeeping on schedule, and a team on call through your stay.</p></div>
+    <div class="feat"><h3>Full kitchen</h3><p>Cook in, or order out from Assagaon&rsquo;s cafes and restaurants.</p></div>
+  </div>
+  <figure class="pool" style="margin-inline:0;margin-bottom:0">
+    <img src="pool.jpg" alt="The common swimming pool at Amara, edged with lawn, palms and potted plants" loading="lazy">
+    <figcaption>The common pool and garden at Amara.</figcaption>
+  </figure>
+</div></section>
+
+<section class="loc" id="location"><div class="wrap">
+  <div class="head">
+    <div>
+      <div class="eyebrow">The location</div>
+      <h2 class="sec-h">Verla Canca, just off Assagaon</h2>
+      <p>A quiet North Goa village a short drive inland from the Vagator and Anjuna coast, with Assagaon&rsquo;s food scene next door. Tap a place to see it on the map and get directions.</p>
+      <p class="addr"><span class="k">Address</span>HQPW+V2Q, Sateri Nagar Colony, Verla, Parra, Goa 403510</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div>
+      <ul class="dests" id="dests"></ul>
+      <div class="maplink"><a class="btn solid" href="https://maps.app.goo.gl/NUFLdzUFVejZxJKB7?g_st=ic" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        Open Amara in Google Maps</a></div>
+    </div>
+    <div class="mapbox">
+      <svg id="map" viewBox="0 0 450 890" role="img" aria-label="Map of North Goa showing Amara in Verla Canca, nearby beaches, Mapusa, Panaji and both airports"></svg>
+      <p class="mapnote">Indicative map, drawn to approximate scale. Lines show direction, not road routes. Drive times are approximate and vary with traffic and season.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="eyebrow">Book your stay</div>
+    <h2>Amara by Casa Melhor</h2>
+    <p class="from">Starting <b>&#8377;5,000</b> per apartment</p>
+  </div>
+  <div class="contacts">
+    <div class="contact">
+      <div style="min-width:0"><div class="k">Email</div><a class="v" href="mailto:bookings@casamelhor.in">bookings@casamelhor.in</a></div>
+      <div class="acts"><button class="mini" id="copy-email" data-copy="bookings@casamelhor.in" type="button">Copy</button></div>
+    </div>
+    <div class="contact">
+      <div style="min-width:0"><div class="k">Phone &amp; WhatsApp</div><a class="v" href="tel:+918600145945">+91 86001 45945</a></div>
+      <div class="acts">
+        <a class="mini" href="https://wa.me/918600145945?text=Hi%2C%20I%27d%20like%20to%20book%20a%20stay%20at%20Amara%2C%20Verla%20Canca." target="_blank" rel="noopener">WhatsApp</a>
+        <button class="mini" id="copy-phone" data-copy="+91 86001 45945" type="button">Copy</button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Casa Melhor &middot; Amara, Sateri Nagar Colony, Verla, Parra, Goa 403510 &middot; Plus code HQPW+V2Q</div></footer>
+
+<script>
+(function(){
+  // Projection: lng 73.69..73.90 -> x 0..450, lat 15.76..15.36 -> y 0..890
+  var P=function(lat,lng){return [(lng-73.69)*450/0.21,(15.76-lat)*890/0.40]};
+  var HOME={lat:15.5872125,lng:73.7951094};
+  var ORIGIN="15.5872125,73.7951094";
+  var D=[
+    {g:"Nearby",id:"assagaon",name:"Assagaon cafes & restaurants",short:"Assagaon",t:"10 min",lat:15.5960,lng:73.7710,q:"Assagao, Goa",lx:-6,ly:-12,a:"middle"},
+    {g:"Nearby",id:"vagator",name:"Vagator Beach",short:"Vagator",t:"10 min",lat:15.6000,lng:73.7340,q:"Vagator Beach, Goa",lx:-10,ly:4,a:"end"},
+    {g:"Nearby",id:"anjuna",name:"Anjuna",short:"Anjuna",t:"About 15 min",lat:15.5750,lng:73.7400,q:"Anjuna Beach, Goa",lx:-10,ly:4,a:"end"},
+    {g:"Nearby",id:"baga",name:"Baga",short:"Baga",t:"About 20 min",lat:15.5560,lng:73.7520,q:"Baga Beach, Goa",lx:-10,ly:4,a:"end"},
+    {g:"Airports",id:"mopa",name:"Manohar International Airport, Mopa",short:"Mopa Airport",t:"About 35 min",d:"Approx. 25 km",lat:15.7310,lng:73.8640,q:"Manohar International Airport, Mopa, Goa",lx:-12,ly:4,a:"end"},
+    {g:"Airports",id:"dabolim",name:"Dabolim Airport",short:"Dabolim Airport",t:"About 1 hr",d:"Approx. 42 km",lat:15.3808,lng:73.8314,q:"Dabolim Airport, Goa",lx:12,ly:5,a:"start"}
+  ];
+  var TOWNS=[{n:"Mapusa",lat:15.5915,lng:73.8090,lx:9,ly:4,a:"start"},{n:"Panaji",lat:15.4909,lng:73.8278,lx:9,ly:12,a:"start"},{n:"Vasco",lat:15.3960,lng:73.8150,lx:-8,ly:-6,a:"end"}];
+  var COAST=[[15.80,73.672],[15.712,73.690],[15.686,73.703],[15.660,73.711],[15.628,73.722],[15.606,73.737],[15.600,73.733],[15.575,73.739],[15.556,73.751],[15.540,73.755],[15.515,73.762],[15.490,73.773],[15.480,73.808],[15.455,73.805],[15.415,73.790],[15.395,73.806],[15.370,73.835],[15.340,73.850]];
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+  function spline(pts){var d="M"+pts[0].join(",");for(var i=0;i<pts.length-1;i++){var p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;var c1=[p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6],c2=[p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6];d+="C"+c1.map(f).join(",")+" "+c2.map(f).join(",")+" "+p2.map(f).join(",")}return d}
+  function f(n){return Math.round(n*10)/10}
+  var svg=document.getElementById("map");
+  el("rect",{x:0,y:0,width:450,height:890,fill:"var(--land)"},svg);
+  var cp=COAST.map(function(c){return P(c[0],c[1])});
+  el("path",{d:spline(cp)+"L-20,900L-20,-20Z",fill:"var(--sea)"},svg);
+  el("path",{d:spline(cp),fill:"none",stroke:"var(--line)","stroke-width":1.2},svg);
+  // Rivers (stylised)
+  [["M96,343 C140,331 180,318 236,311 S330,290 460,262",7,"Chapora"],["M198,612 C240,600 268,586 300,578 S380,560 460,548",14,"Mandovi"],["M222,722 C280,725 330,734 380,738 S430,745 460,746",24,"Zuari"]].forEach(function(r){el("path",{d:r[0],fill:"none",stroke:"var(--river)","stroke-width":r[1],"stroke-linecap":"round"},svg)});
+  var lbl=function(x,y,s,o){var t=el("text",Object.assign({x:x,y:y,"font-family":"Lato, Arial, sans-serif","font-size":13,fill:"var(--muted)"},o||{}),svg);t.textContent=s;return t};
+  lbl(330,282,"Chapora River",{"font-size":11,"font-style":"italic","text-anchor":"middle",transform:"rotate(-12 330 282)"});
+  lbl(395,546,"Mandovi",{"font-size":11,"font-style":"italic","text-anchor":"middle",transform:"rotate(-8 395 546)"});
+  lbl(400,725,"Zuari",{"font-size":11,"font-style":"italic","text-anchor":"middle"});
+  lbl(78,700,"ARABIAN",{"font-size":12,"letter-spacing":"4","text-anchor":"middle"});
+  lbl(78,718,"SEA",{"font-size":12,"letter-spacing":"4","text-anchor":"middle"});
+  // North arrow + scale (5 km = 100 px)
+  var na=el("g",{transform:"translate(36,40)"},svg);
+  el("path",{d:"M0,-16 L7,8 L0,3 L-7,8Z",fill:"var(--ink)"},na);
+  var nt=el("text",{x:0,y:24,"text-anchor":"middle","font-family":"Lato, Arial, sans-serif","font-size":12,"font-weight":700,fill:"var(--ink)"},na);nt.textContent="N";
+  var sc=el("g",{transform:"translate(24,862)"},svg);
+  el("path",{d:"M0,0 V6 H100 V0",fill:"none",stroke:"var(--ink)","stroke-width":1.5},sc);
+  var st=el("text",{x:50,y:-6,"text-anchor":"middle","font-family":"Lato, Arial, sans-serif","font-size":11,fill:"var(--ink)"},sc);st.textContent="5 km";
+  var H=P(HOME.lat,HOME.lng);
+  // Routes
+  var routes={};
+  D.forEach(function(d){var p=P(d.lat,d.lng);routes[d.id]=el("line",{x1:f(H[0]),y1:f(H[1]),x2:f(p[0]),y2:f(p[1]),stroke:"var(--leaf)","stroke-width":2,"stroke-dasharray":"4 5","stroke-linecap":"round",opacity:.22},svg)});
+  // Towns
+  TOWNS.forEach(function(t){var p=P(t.lat,t.lng);el("circle",{cx:f(p[0]),cy:f(p[1]),r:3,fill:"var(--muted)"},svg);lbl(f(p[0]+t.lx),f(p[1]+t.ly),t.n,{"text-anchor":t.a,"font-size":12})});
+  // Destinations
+  var marks={};
+  D.forEach(function(d){var p=P(d.lat,d.lng);var g=el("g",{style:"cursor:pointer"},svg);
+    var ring=el("circle",{cx:f(p[0]),cy:f(p[1]),r:5.5,fill:"var(--paper)",stroke:"var(--leaf)","stroke-width":2},g);
+    var t=el("text",{x:f(p[0]+d.lx),y:f(p[1]+d.ly),"text-anchor":d.a,"font-family":"Lato, Arial, sans-serif","font-size":13,"font-weight":700,fill:"var(--ink)",stroke:"var(--land)","stroke-width":3,"paint-order":"stroke"},g);t.textContent=d.short;
+    g.addEventListener("click",function(){select(d.id)});marks[d.id]={ring:ring,g:g}});
+  // Home pin
+  el("circle",{cx:f(H[0]),cy:f(H[1]),r:16,fill:"var(--leaf)",opacity:.16},svg);
+  el("circle",{cx:f(H[0]),cy:f(H[1]),r:8,fill:"var(--forest)",stroke:"var(--pin-ring)","stroke-width":2.5},svg);
+  var ht=el("text",{x:f(H[0]),y:f(H[1]+30),"text-anchor":"middle","font-family":"Cormorant Garamond, Georgia, serif","font-size":19,"font-weight":600,"letter-spacing":"2",fill:"var(--ink)",stroke:"var(--land)","stroke-width":4,"paint-order":"stroke"},svg);ht.textContent="AMARA";
+  // Time pill near selected destination
+  var pill=el("g",{},svg),pr=el("rect",{rx:11,ry:11,height:22,fill:"var(--forest)"},pill),pt=el("text",{"font-family":"Lato, Arial, sans-serif","font-size":12,"font-weight":700,fill:"var(--on-forest)","text-anchor":"middle"},pill);
+  // List
+  var ul=document.getElementById("dests"),btns={},lastG="";
+  D.forEach(function(d){
+    if(d.g!==lastG){var gl=document.createElement("li");gl.className="group-label";gl.textContent=d.g;ul.appendChild(gl);lastG=d.g}
+    var li=document.createElement("li");var b=document.createElement("button");b.type="button";b.className="dest";b.id="dest-"+d.id;b.setAttribute("aria-pressed","false");
+    var url="https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(ORIGIN)+"&destination="+encodeURIComponent(d.q)+"&travelmode=driving";
+    b.innerHTML='<span class="n"></span><span class="t"></span>'+(d.d?'<span class="d"></span>':'')+'<a class="dir" target="_blank" rel="noopener">Directions in Google Maps &rarr;</a>';
+    b.querySelector(".n").textContent=d.name;b.querySelector(".t").textContent=d.t;if(d.d)b.querySelector(".d").textContent=d.d+" by road";
+    var a=b.querySelector(".dir");a.href=url;a.addEventListener("click",function(e){e.stopPropagation()});
+    b.addEventListener("click",function(){select(d.id)});li.appendChild(b);ul.appendChild(li);btns[d.id]=b});
+  function select(id){
+    D.forEach(function(d){var on=d.id===id;btns[d.id].setAttribute("aria-pressed",on?"true":"false");routes[d.id].setAttribute("opacity",on?1:.22);routes[d.id].setAttribute("stroke-width",on?2.8:2);marks[d.id].ring.setAttribute("fill",on?"var(--leaf)":"var(--paper)");marks[d.id].ring.setAttribute("r",on?7:5.5);
+      if(on){var p=P(d.lat,d.lng),mx=(H[0]+p[0])/2,my=(H[1]+p[1])/2;if(Math.hypot(p[0]-H[0],p[1]-H[1])<70){mx=p[0]-6;my=p[1]-38}pt.textContent=d.t;var w=d.t.length*7+18;pr.setAttribute("width",w);pr.setAttribute("x",f(mx-w/2));pr.setAttribute("y",f(my-11));pt.setAttribute("x",f(mx));pt.setAttribute("y",f(my+4))}});
+  }
+  select("vagator");
+  // Copy buttons
+  document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var v=b.getAttribute("data-copy"),orig=b.textContent;
+    var done=function(){b.textContent="Copied";setTimeout(function(){b.textContent=orig},1600)};
+    try{navigator.clipboard.writeText(v).then(done,function(){sel(b)})}catch(e){sel(b)}})});
+  function sel(b){var v=b.closest(".contact").querySelector(".v");var r=document.createRange();r.selectNodeContents(v);var s=window.getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected";setTimeout(function(){b.textContent="Copy"},1600)}
+})();
+</script>
+
+</body>
+</html>

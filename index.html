@@ -103,14 +103,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--leaf);outline-offse
 .loc .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:40px;margin-top:36px;align-items:start}
 .dests{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
 .group-label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--muted);margin:8px 0 2px}
-.dest{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--paper);cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%;transition:border-color .2s,box-shadow .2s}
+.dest{padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--paper);transition:border-color .2s,box-shadow .2s}
 .dest:hover{border-color:var(--leaf)}
-.dest[aria-pressed="true"]{border-color:var(--forest);box-shadow:inset 3px 0 0 var(--leaf)}
+.dest.on{border-color:var(--forest);box-shadow:inset 3px 0 0 var(--leaf)}
+.pick{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center;width:100%;padding:0;margin:0;border:0;background:none;cursor:pointer;text-align:left;font:inherit;color:inherit}
 .dest .n{font-weight:700;min-width:0}
 .dest .t{font-family:var(--display);font-size:24px;font-weight:600;line-height:1;white-space:nowrap;font-variant-numeric:tabular-nums}
 .dest .d{grid-column:1/-1;font-size:13px;color:var(--muted)}
-.dir{display:none;grid-column:1/-1;margin-top:6px;font-size:13px;font-weight:700;color:var(--leaf);text-decoration:none;letter-spacing:.04em}
-.dest[aria-pressed="true"] .dir{display:inline-flex;gap:6px;align-items:center}
+.dir{display:inline-flex;gap:6px;align-items:center;margin-top:8px;font-size:13px;font-weight:700;color:var(--leaf);text-decoration:none;letter-spacing:.04em}
+.dir:hover{text-decoration:underline}
 .mapbox{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}
 .mapbox svg{display:block;width:100%;height:auto;max-height:78vh}
 .mapnote{font-size:12px;color:var(--muted);margin-top:8px;padding:0 4px}
@@ -264,12 +265,12 @@ footer{padding-block:28px;font-size:13px;color:var(--muted);text-align:center}
   var HOME={lat:15.5872125,lng:73.7951094};
   var ORIGIN="15.5872125,73.7951094";
   var D=[
-    {g:"Nearby",id:"assagaon",name:"Assagaon cafes & restaurants",short:"Assagaon",t:"10 min",lat:15.5960,lng:73.7710,q:"Assagao, Goa",lx:-6,ly:-12,a:"middle"},
-    {g:"Nearby",id:"vagator",name:"Vagator Beach",short:"Vagator",t:"10 min",lat:15.6000,lng:73.7340,q:"Vagator Beach, Goa",lx:-10,ly:4,a:"end"},
-    {g:"Nearby",id:"anjuna",name:"Anjuna",short:"Anjuna",t:"About 15 min",lat:15.5750,lng:73.7400,q:"Anjuna Beach, Goa",lx:-10,ly:4,a:"end"},
-    {g:"Nearby",id:"baga",name:"Baga",short:"Baga",t:"About 20 min",lat:15.5560,lng:73.7520,q:"Baga Beach, Goa",lx:-10,ly:4,a:"end"},
-    {g:"Airports",id:"mopa",name:"Manohar International Airport, Mopa",short:"Mopa Airport",t:"About 35 min",d:"Approx. 25 km",lat:15.7310,lng:73.8640,q:"Manohar International Airport, Mopa, Goa",lx:-12,ly:4,a:"end"},
-    {g:"Airports",id:"dabolim",name:"Dabolim Airport",short:"Dabolim Airport",t:"About 1 hr",d:"Approx. 42 km",lat:15.3808,lng:73.8314,q:"Dabolim Airport, Goa",lx:12,ly:5,a:"start"}
+    {g:"Nearby",id:"assagaon",name:"Assagaon cafes & restaurants",short:"Assagaon",t:"10 min",m:"10 min",lat:15.5960,lng:73.7710,q:"Assagao, Goa",lx:-6,ly:-26,a:"middle"},
+    {g:"Nearby",id:"vagator",name:"Vagator Beach",short:"Vagator",t:"10 min",m:"10 min",lat:15.6000,lng:73.7340,q:"Vagator Beach, Goa",lx:-10,ly:2,a:"end"},
+    {g:"Nearby",id:"anjuna",name:"Anjuna",short:"Anjuna",t:"About 15 min",m:"15 min",lat:15.5750,lng:73.7400,q:"Anjuna Beach, Goa",lx:-10,ly:2,a:"end"},
+    {g:"Nearby",id:"baga",name:"Baga",short:"Baga",t:"About 20 min",m:"20 min",lat:15.5560,lng:73.7520,q:"Baga Beach, Goa",lx:-10,ly:2,a:"end"},
+    {g:"Airports",id:"mopa",name:"Manohar International Airport, Mopa",short:"Mopa Airport",t:"About 35 min",d:"Approx. 25 km",m:"35 min · 25 km",lat:15.7310,lng:73.8640,q:"Manohar International Airport, Mopa, Goa",lx:-12,ly:0,a:"end"},
+    {g:"Airports",id:"dabolim",name:"Dabolim Airport",short:"Dabolim Airport",t:"About 1 hr",d:"Approx. 42 km",m:"1 hr · 42 km",lat:15.3808,lng:73.8314,q:"Dabolim Airport, Goa",lx:12,ly:-2,a:"start"}
   ];
   var TOWNS=[{n:"Mapusa",lat:15.5915,lng:73.8090,lx:9,ly:4,a:"start"},{n:"Panaji",lat:15.4909,lng:73.8278,lx:9,ly:12,a:"start"},{n:"Vasco",lat:15.3960,lng:73.8150,lx:-8,ly:-6,a:"end"}];
   var COAST=[[15.80,73.672],[15.712,73.690],[15.686,73.703],[15.660,73.711],[15.628,73.722],[15.606,73.737],[15.600,73.733],[15.575,73.739],[15.556,73.751],[15.540,73.755],[15.515,73.762],[15.490,73.773],[15.480,73.808],[15.455,73.805],[15.415,73.790],[15.395,73.806],[15.370,73.835],[15.340,73.850]];
@@ -308,26 +309,27 @@ footer{padding-block:28px;font-size:13px;color:var(--muted);text-align:center}
   D.forEach(function(d){var p=P(d.lat,d.lng);var g=el("g",{style:"cursor:pointer"},svg);
     var ring=el("circle",{cx:f(p[0]),cy:f(p[1]),r:5.5,fill:"var(--paper)",stroke:"var(--leaf)","stroke-width":2},g);
     var t=el("text",{x:f(p[0]+d.lx),y:f(p[1]+d.ly),"text-anchor":d.a,"font-family":"Lato, Arial, sans-serif","font-size":13,"font-weight":700,fill:"var(--ink)",stroke:"var(--land)","stroke-width":3,"paint-order":"stroke"},g);t.textContent=d.short;
+    var tm=el("text",{x:f(p[0]+d.lx),y:f(p[1]+d.ly+15),"text-anchor":d.a,"font-family":"Lato, Arial, sans-serif","font-size":12,"font-weight":700,fill:"var(--leaf)",stroke:"var(--land)","stroke-width":3,"paint-order":"stroke"},g);tm.textContent=d.m;
     g.addEventListener("click",function(){select(d.id)});marks[d.id]={ring:ring,g:g}});
   // Home pin
   el("circle",{cx:f(H[0]),cy:f(H[1]),r:16,fill:"var(--leaf)",opacity:.16},svg);
   el("circle",{cx:f(H[0]),cy:f(H[1]),r:8,fill:"var(--forest)",stroke:"var(--pin-ring)","stroke-width":2.5},svg);
   var ht=el("text",{x:f(H[0]),y:f(H[1]+30),"text-anchor":"middle","font-family":"Cormorant Garamond, Georgia, serif","font-size":19,"font-weight":600,"letter-spacing":"2",fill:"var(--ink)",stroke:"var(--land)","stroke-width":4,"paint-order":"stroke"},svg);ht.textContent="AMARA";
   // Time pill near selected destination
-  var pill=el("g",{},svg),pr=el("rect",{rx:11,ry:11,height:22,fill:"var(--forest)"},pill),pt=el("text",{"font-family":"Lato, Arial, sans-serif","font-size":12,"font-weight":700,fill:"var(--on-forest)","text-anchor":"middle"},pill);
   // List
-  var ul=document.getElementById("dests"),btns={},lastG="";
+  var ul=document.getElementById("dests"),btns={},cards={},lastG="";
   D.forEach(function(d){
     if(d.g!==lastG){var gl=document.createElement("li");gl.className="group-label";gl.textContent=d.g;ul.appendChild(gl);lastG=d.g}
-    var li=document.createElement("li");var b=document.createElement("button");b.type="button";b.className="dest";b.id="dest-"+d.id;b.setAttribute("aria-pressed","false");
+    var li=document.createElement("li");li.className="dest";li.id="dest-"+d.id;
+    var b=document.createElement("button");b.type="button";b.className="pick";b.setAttribute("aria-pressed","false");
     var url="https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(ORIGIN)+"&destination="+encodeURIComponent(d.q)+"&travelmode=driving";
-    b.innerHTML='<span class="n"></span><span class="t"></span>'+(d.d?'<span class="d"></span>':'')+'<a class="dir" target="_blank" rel="noopener">Directions in Google Maps &rarr;</a>';
+    b.innerHTML='<span class="n"></span><span class="t"></span>'+(d.d?'<span class="d"></span>':'');
     b.querySelector(".n").textContent=d.name;b.querySelector(".t").textContent=d.t;if(d.d)b.querySelector(".d").textContent=d.d+" by road";
-    var a=b.querySelector(".dir");a.href=url;a.addEventListener("click",function(e){e.stopPropagation()});
-    b.addEventListener("click",function(){select(d.id)});li.appendChild(b);ul.appendChild(li);btns[d.id]=b});
+    b.addEventListener("click",function(){select(d.id)});
+    var a=document.createElement("a");a.className="dir";a.href=url;a.target="_blank";a.rel="noopener";a.innerHTML="Directions in Google Maps &rarr;";
+    li.appendChild(b);li.appendChild(a);ul.appendChild(li);btns[d.id]=b;cards[d.id]=li});
   function select(id){
-    D.forEach(function(d){var on=d.id===id;btns[d.id].setAttribute("aria-pressed",on?"true":"false");routes[d.id].setAttribute("opacity",on?1:.22);routes[d.id].setAttribute("stroke-width",on?2.8:2);marks[d.id].ring.setAttribute("fill",on?"var(--leaf)":"var(--paper)");marks[d.id].ring.setAttribute("r",on?7:5.5);
-      if(on){var p=P(d.lat,d.lng),mx=(H[0]+p[0])/2,my=(H[1]+p[1])/2;if(Math.hypot(p[0]-H[0],p[1]-H[1])<70){mx=p[0]-6;my=p[1]-38}pt.textContent=d.t;var w=d.t.length*7+18;pr.setAttribute("width",w);pr.setAttribute("x",f(mx-w/2));pr.setAttribute("y",f(my-11));pt.setAttribute("x",f(mx));pt.setAttribute("y",f(my+4))}});
+    D.forEach(function(d){var on=d.id===id;btns[d.id].setAttribute("aria-pressed",on?"true":"false");cards[d.id].classList.toggle("on",on);routes[d.id].setAttribute("opacity",on?1:.22);routes[d.id].setAttribute("stroke-width",on?2.8:2);marks[d.id].ring.setAttribute("fill",on?"var(--leaf)":"var(--paper)");marks[d.id].ring.setAttribute("r",on?7:5.5)});
   }
   select("vagator");
   // Copy buttons

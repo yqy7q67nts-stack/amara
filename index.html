@@ -133,6 +133,36 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--leaf);outline-offse
 .mini:hover{background:rgba(245,240,231,.12)}
 footer{padding-block:28px;font-size:13px;color:var(--muted);text-align:center}
 
+
+/* FAQ */
+.faq{padding-block:64px;border-top:1px solid var(--line)}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.faq .intro p{margin-top:16px;color:var(--muted);max-width:28em}
+.qa{border-top:1px solid var(--line)}
+.qa details{border-bottom:1px solid var(--line)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 0;font-family:var(--display);font-size:22px;font-weight:600;line-height:1.25}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font-family:var(--body);font-weight:300;font-size:26px;color:var(--leaf);flex:none;transition:transform .2s}
+.qa details[open] summary::after{transform:rotate(45deg)}
+.qa details p{padding:0 0 18px;color:var(--muted);max-width:40em}
+/* Enquiry form */
+.enq{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.enq label{display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--on-forest-muted);min-width:0}
+.enq .full{grid-column:1/-1}
+.enq input,.enq textarea{font:inherit;font-size:16px;letter-spacing:0;text-transform:none;font-weight:400;color:var(--on-forest);background:rgba(245,240,231,.06);border:1px solid rgba(245,240,231,.3);border-radius:6px;padding:11px 12px;width:100%;min-width:0;box-sizing:border-box;color-scheme:dark}
+.enq textarea{resize:vertical;min-height:64px}
+.enq input:focus,.enq textarea:focus{outline:2px solid var(--on-forest);outline-offset:1px}
+.enq-sum{grid-column:1/-1;font-size:14px;color:var(--on-forest-muted);min-height:1.4em}
+.enq-sum.err{color:#ffd8a8}
+.enq-acts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px}
+.btn.light{background:var(--on-forest);color:var(--forest);border-color:var(--on-forest)}
+.btn.light:hover{background:transparent;color:var(--on-forest)}
+.btn.line{color:var(--on-forest);border-color:rgba(245,240,231,.45)}
+.btn.line:hover{border-color:var(--on-forest)}
+.book .wrap{align-items:start}
+.reg{display:block;margin-top:6px}
+@media (max-width:860px){.faq .wrap{grid-template-columns:1fr;gap:28px}}
+@media (max-width:480px){.enq{grid-template-columns:1fr}}
 @media (max-width:860px){
   .hero .wrap,.stay .wrap,.book .wrap,.loc .grid{grid-template-columns:1fr;gap:36px}
   .hero{padding-block:8px 44px}
@@ -153,6 +183,10 @@ footer{padding-block:28px;font-size:13px;color:var(--muted);text-align:center}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
 </style>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<link rel="canonical" href="https://yqy7q67nts-stack.github.io/amara/">
+<meta name="theme-color" content="#214d31">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "Amara by Casa Melhor", "description": "An apartel in Verla Canca, just off Assagaon, North Goa: spacious 2 Bed residences with hotel-style service, a common pool and full kitchens.", "url": "https://yqy7q67nts-stack.github.io/amara/", "image": ["https://yqy7q67nts-stack.github.io/amara/og.jpg", "https://yqy7q67nts-stack.github.io/amara/bed.jpg", "https://yqy7q67nts-stack.github.io/amara/pool.jpg"], "telephone": "+91-86001-45945", "email": "bookings@casamelhor.in", "address": {"@type": "PostalAddress", "streetAddress": "Sateri Nagar Colony, Verla", "addressLocality": "Parra", "addressRegion": "Goa", "postalCode": "403510", "addressCountry": "IN"}, "geo": {"@type": "GeoCoordinates", "latitude": 15.5872125, "longitude": 73.7951094}, "hasMap": "https://maps.app.goo.gl/NUFLdzUFVejZxJKB7", "priceRange": "From ₹5,000 per apartment", "currenciesAccepted": "INR", "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Shared swimming pool", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Full kitchen", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Housekeeping", "value": true}, {"@type": "LocationFeatureSpecification", "name": "2 bedrooms", "value": true}], "brand": {"@type": "Brand", "name": "Casa Melhor"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How big are the residences?", "acceptedAnswer": {"@type": "Answer", "text": "Each residence at Amara is a spacious 2 Bed apartment with a full kitchen and hotel-style service."}}, {"@type": "Question", "name": "Is there a swimming pool?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Amara has a common swimming pool for all guests, set in a private garden."}}, {"@type": "Question", "name": "What service is included?", "acceptedAnswer": {"@type": "Answer", "text": "Housekeeping on schedule, and a team on call through your stay."}}, {"@type": "Question", "name": "How far are the airports?", "acceptedAnswer": {"@type": "Answer", "text": "Manohar International Airport, Mopa, is approx. 25 km, about 35 minutes. Dabolim Airport is approx. 42 km, about 1 hour."}}, {"@type": "Question", "name": "How close are the beaches and cafes?", "acceptedAnswer": {"@type": "Answer", "text": "Assagaon's cafes and restaurants and Vagator Beach are about 10 minutes away, Anjuna about 15 minutes and Baga about 20 minutes."}}, {"@type": "Question", "name": "Is Amara good for work-from-Goa or longer stays?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Amara is set up for weekend breaks, work-from-Goa and longer, slower stays. Ask us for weekly and monthly rates."}}, {"@type": "Question", "name": "What does a stay cost?", "acceptedAnswer": {"@type": "Answer", "text": "Stays start at ₹5,000 per apartment. Send your dates and number of guests for an exact quote."}}, {"@type": "Question", "name": "Is Amara registered?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Amara is registered with the Department of Tourism, Government of Goa."}}, {"@type": "Question", "name": "How do I book?", "acceptedAnswer": {"@type": "Answer", "text": "Use the enquiry form on this page to send your dates on WhatsApp, call +91 86001 45945, or email bookings@casamelhor.in."}}]}</script>
 </head>
 <body>
 
@@ -181,6 +215,7 @@ footer{padding-block:28px;font-size:13px;color:var(--muted);text-align:center}
       <a class="btn ghost" href="#location">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
         See the location</a>
+      <a class="btn ghost" href="#faq">FAQ</a>
     </div>
   </div>
   <figure class="arch" style="margin:0">
@@ -235,11 +270,42 @@ footer{padding-block:28px;font-size:13px;color:var(--muted);text-align:center}
   </div>
 </div></section>
 
+<section class="faq" id="faq"><div class="wrap">
+  <div class="intro">
+    <div class="eyebrow">Good to know</div>
+    <h2 class="sec-h">Questions guests ask</h2>
+    <p>Anything else, ask us on WhatsApp and the Amara team will reply.</p>
+  </div>
+  <div class="qa">
+    <details><summary>How big are the residences?</summary><p>Each residence at Amara is a spacious 2 Bed apartment with a full kitchen and hotel-style service.</p></details>
+    <details><summary>Is there a swimming pool?</summary><p>Yes. Amara has a common swimming pool for all guests, set in a private garden.</p></details>
+    <details><summary>What service is included?</summary><p>Housekeeping on schedule, and a team on call through your stay.</p></details>
+    <details><summary>How far are the airports?</summary><p>Manohar International Airport, Mopa, is approx. 25 km, about 35 minutes. Dabolim Airport is approx. 42 km, about 1 hour.</p></details>
+    <details><summary>How close are the beaches and cafes?</summary><p>Assagaon's cafes and restaurants and Vagator Beach are about 10 minutes away, Anjuna about 15 minutes and Baga about 20 minutes.</p></details>
+    <details><summary>Is Amara good for work-from-Goa or longer stays?</summary><p>Yes. Amara is set up for weekend breaks, work-from-Goa and longer, slower stays. Ask us for weekly and monthly rates.</p></details>
+    <details><summary>What does a stay cost?</summary><p>Stays start at &#8377;5,000 per apartment. Send your dates and number of guests for an exact quote.</p></details>
+    <details><summary>Is Amara registered?</summary><p>Yes. Amara is registered with the Department of Tourism, Government of Goa.</p></details>
+    <details><summary>How do I book?</summary><p>Use the enquiry form on this page to send your dates on WhatsApp, call +91 86001 45945, or email bookings@casamelhor.in.</p></details>
+  </div>
+</div></section>
+
 <section class="book" id="book"><div class="wrap">
   <div>
     <div class="eyebrow">Book your stay</div>
     <h2>Amara by Casa Melhor</h2>
     <p class="from">Starting <b>&#8377;5,000</b> per apartment</p>
+    <form class="enq" id="enq" novalidate>
+      <label for="enq-in">Check-in<input id="enq-in" type="date" required></label>
+      <label for="enq-out">Check-out<input id="enq-out" type="date" required></label>
+      <label for="enq-guests">Guests<input id="enq-guests" type="number" min="1" value="2" inputmode="numeric"></label>
+      <label for="enq-name">Your name<input id="enq-name" type="text" autocomplete="name" placeholder="Name"></label>
+      <label class="full" for="enq-note">Anything else (optional)<textarea id="enq-note" rows="2" placeholder="Arrival time, airport pickup, long stay, work-from-Goa"></textarea></label>
+      <p class="enq-sum" id="enq-sum" aria-live="polite">Pick your dates to send an enquiry.</p>
+      <div class="enq-acts">
+        <a class="btn light" id="enq-wa" href="https://wa.me/918600145945" target="_blank" rel="noopener">Send enquiry on WhatsApp</a>
+        <a class="btn line" id="enq-mail" href="mailto:bookings@casamelhor.in">Email instead</a>
+      </div>
+    </form>
   </div>
   <div class="contacts">
     <div class="contact">
@@ -256,7 +322,37 @@ footer{padding-block:28px;font-size:13px;color:var(--muted);text-align:center}
   </div>
 </div></section>
 
-<footer><div class="wrap">Casa Melhor &middot; Amara, Sateri Nagar Colony, Verla, Parra, Goa 403510 &middot; Plus code HQPW+V2Q</div></footer>
+<footer><div class="wrap">Casa Melhor &middot; Amara, Sateri Nagar Colony, Verla, Parra, Goa 403510 &middot; Plus code HQPW+V2Q<span class="reg">Registered with the Department of Tourism, Government of Goa</span></div></footer>
+<script>
+(function(){
+  var f=document.getElementById("enq");if(!f)return;
+  var ci=document.getElementById("enq-in"),co=document.getElementById("enq-out"),g=document.getElementById("enq-guests"),nm=document.getElementById("enq-name"),nt=document.getElementById("enq-note"),sum=document.getElementById("enq-sum"),wa=document.getElementById("enq-wa"),ml=document.getElementById("enq-mail");
+  var pad=function(n){return(n<10?"0":"")+n};var t=new Date();var today=t.getFullYear()+"-"+pad(t.getMonth()+1)+"-"+pad(t.getDate());ci.min=today;co.min=today;
+  var M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var fmt=function(s){var p=s.split("-");return Number(p[2])+" "+M[Number(p[1])-1]+" "+p[0]};
+  function build(){
+    var a=ci.value,b=co.value,n=0,ok=false;sum.classList.remove("err");
+    if(a){co.min=a}
+    if(a&&b){n=Math.round((Date.parse(b)-Date.parse(a))/864e5);ok=n>0}
+    var lines=["Hi, I'd like to enquire about a stay at Amara, Verla Canca."];
+    if(nm.value.trim())lines.push("Name: "+nm.value.trim());
+    if(a)lines.push("Check-in: "+fmt(a));
+    if(b)lines.push("Check-out: "+fmt(b)+(ok?" ("+n+(n===1?" night)":" nights)"):""));
+    if(g.value)lines.push("Guests: "+g.value);
+    if(nt.value.trim())lines.push("Note: "+nt.value.trim());
+    var msg=lines.join("\n");
+    wa.href="https://wa.me/918600145945?text="+encodeURIComponent(msg);
+    ml.href="mailto:bookings@casamelhor.in?subject="+encodeURIComponent("Amara enquiry"+(a?" from "+fmt(a):""))+"&body="+encodeURIComponent(msg);
+    if(a&&b&&!ok){sum.textContent="Check-out must be after check-in.";sum.classList.add("err")}
+    else if(ok){sum.textContent=n+(n===1?" night":" nights")+", "+(g.value||"?")+" guests. Tap below to send your enquiry."}
+    else{sum.textContent="Pick your dates to send an enquiry."}
+  }
+  ["input","change"].forEach(function(e){f.addEventListener(e,build)});
+  f.addEventListener("submit",function(e){e.preventDefault()});
+  build();
+})();
+</script>
+
 
 <script>
 (function(){

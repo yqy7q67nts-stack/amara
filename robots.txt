@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yqy7q67nts-stack.github.io/amara/sitemap.xml
